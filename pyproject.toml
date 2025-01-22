@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "bootcamp-py-aula-08"
+version = "0.1.0"
+description = "Jornada de Dados. Bootcamp Python. Aula 08."
+authors = ["Greg Oliveira <gregoryomelo@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.black.dependencies]
+isort = "^5.13.2"
+flake8 = "^7.1.1"
+flake8-bugbear = "^24.12.12"
+pydocstyle = "^6.3.0"
+pre-commit = "^4.1.0"
+commitizen = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 88
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "pep440"
+version_provider = "poetry"
+update_changelog_on_bump = true
+major_version_zero = true
